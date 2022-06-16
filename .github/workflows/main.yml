@@ -16,7 +16,9 @@ jobs:
           go vet
           go imports
       - name: Run go vet
-        run: go vet ./...    
+        run: go vet ./... 
+      - name: Run go fmt
+        run: diff -u <(echo -n) <(gofmt -d -s .)
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
