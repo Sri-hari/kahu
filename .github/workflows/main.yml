@@ -12,13 +12,12 @@ jobs:
       - run: |
           cd providerframework/meta_service/lib/go
           ls -l
-          go version
-          go vet
-          go imports
-      - name: Run go vet
-        run: go vet ./... 
-      - name: Run go fmt
-        run: diff -u <(echo -n) <(gofmt -d -s .)
+          go get golang.org/x/tools/cmd/goimports
+          go get -u
+          go mod tidy
+          govet .
+          go fmt .
+            
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
