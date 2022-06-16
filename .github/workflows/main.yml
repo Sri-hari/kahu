@@ -15,6 +15,8 @@ jobs:
           go version
           go vet
           go imports
+      - name: Run go vet
+        run: go vet ./...    
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
