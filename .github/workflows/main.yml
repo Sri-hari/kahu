@@ -17,6 +17,7 @@ jobs:
           go mod tidy
           go vet .
           go fmt .
+          ls -l
             
   sonarcloud:
     name: SonarCloud
