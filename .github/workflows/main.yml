@@ -15,7 +15,7 @@ jobs:
           go get golang.org/x/tools/cmd/goimports
           go get -u
           go mod tidy
-          govet .
+          go vet .
           go fmt .
             
   sonarcloud:
