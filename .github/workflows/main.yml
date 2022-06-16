@@ -16,7 +16,7 @@ jobs:
           go get -u
           go mod tidy
           go vet .
-          go fmt -r '(a) -> a' -w .
+          go fmt -r 'rule' '(a) -> a' -w .
           
             
   sonarcloud:
