@@ -16,8 +16,8 @@ jobs:
           go get -u
           go mod tidy
           go vet .
-          go fmt .
-          ls -l
+          go fmt -r '(a) -> a' -w .
+          
             
   sonarcloud:
     name: SonarCloud
