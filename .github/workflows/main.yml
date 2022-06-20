@@ -17,7 +17,8 @@ jobs:
           go mod tidy
           go build .
           go vet .
-          go fmt .
+          go fmt -w main.go
+          
           
             
   sonarcloud:
