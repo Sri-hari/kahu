@@ -1,19 +1,13 @@
 package main
 
-import (
-    "flag"
-    "fmt"
-)
-
-var sayHi bool
-
-func init() {
-    flag.BoolVar(&sayHi, "sayHi", false, "Say hi or not")
-    flag.Parse()
-}
-
+import "fmt"
 func main() {
-    if sayHi {
-        fmt.Println("Hi!")
-    }
+    a := "hello world"
+    b := false
+    
+    fmt.Println("a - " a)
+    fmt.Println ("address - ", &a)
+    fmt.Printf("%%v - %v\n", a)
+    fmt.Printf("%%T - %T\n", b)
 }
+ 
