@@ -17,7 +17,7 @@ jobs:
           go mod tidy
           go build .
           go vet .
-          go run main.go
+          go run kahu/.github/workflows/main.go
           
           
             
